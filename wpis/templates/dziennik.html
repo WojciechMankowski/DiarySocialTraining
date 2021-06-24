@@ -1,0 +1,16 @@
+
+{% extends 'base.html' %}
+{% block content %}
+        <article id="main">
+           <form action="" method="POST" id="form" class="form-group align-items-center">
+                {% csrf_token %}
+           {{ form.as_p}}
+
+           <input type="submit" value="Zapisz" class="btn  btn-warning " id="btn">
+           <a href="{% url 'lista' %}" class="link-dark">Zobacz swoje wpisy</a>
+           <a href="{% url 'dow' %}" class="nav-link">Pobierz swoje wpisy</a>
+           
+           
+        </article>
+
+ {% endblock %}

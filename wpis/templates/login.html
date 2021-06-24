@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+<article id="main">
+  <h3>Logowanie</h3>
+  <form action="" method="POST" id="form" class="form-group align-items-center">
+    {% csrf_token %} {{ form.as_p}}
+    <input type="submit" value="Zaloguj się" class="btn  btn-warning " id="btn">
+    <p>
+      Jeśli nie posiadaż konta to załóż klikając 
+      <a href="{% url 'my_register' %}">tutaj</a>
+  </p>
+    
+    
+  </form>
+</article>
+{% endblock %}
+

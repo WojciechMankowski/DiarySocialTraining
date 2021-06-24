@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <article id="main">
+        <form action="" method="POST" id="form" class="form-group align-items-center"> 
+            {% csrf_token %}
+            {{ form.as_p}}
+            <input type="submit" value="Załóż konto" class="btn  btn-warning " id="btn">
+            
+    </article>
+{% endblock %}

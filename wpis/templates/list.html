@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+        <h3>
+            Właśnie dostałeść nowy wpis do swojego dziennika. <br/>
+            Gratulacje !!!
+        </h3>
+        <span>
+            Zobacz swoje wpisy
+        </span>
+        <div class="wpisy">
+            <table id="tab" class="table table-bordered ">
+                <thead class="thead-light ">
+                    <td>Data</td>
+                    <td> Aktywność</td>
+                    <td> Nastrój</td>
+                </thead>
+                    {% if obj%}
+                    
+                    {%for item in obj%}
+                    <tr>
+                        <td>{{item.data}}</td>
+                        <td>{{item.activity}}</td>
+                        <td>{{item.emotions}}</td> 
+                    </tr>
+                    {%endfor%}
+                    {%endif%}
+            </table>
+        </div>
+
+{% endblock %}
